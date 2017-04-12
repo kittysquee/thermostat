@@ -8,4 +8,8 @@ describe('Thermostat', function(){
   it('has a default temperature of 20', function(){
     expect(thermostat.temperature()).toEqual(20);
   });
+  it('increases temperature by 1', function(){
+    thermostat.increase();
+    expect(thermostat.temperature()).toEqual(21);
+  });
 });
