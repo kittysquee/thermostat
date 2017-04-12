@@ -34,9 +34,15 @@ describe('Thermostat', function(){
   });
 
   it('switch power save mode off', function() {
-    thermostat.powerSaveSwitch();
+    thermostat.powerSaveSwitchOff();
     expect(thermostat.powerSaverOn).toBe(false);
   });
+
+  it('switch power save mode off', function() {
+    thermostat.powerSaveSwitchOn();
+    expect(thermostat.powerSaverOn).toBe(false);
+  });
+
 
   // it('when not in power saving mode has max temp of 32', function() {
   //   thermostat.powerSaveSwitch();

@@ -25,13 +25,18 @@ Thermostat.prototype.decrease = function(){
 }
 };
 
-Thermostat.prototype.powerSaveSwitch = function() {
+Thermostat.prototype.powerSaveSwitchOff = function() {
   if (this.powerSaverOn) {
     this.powerSaverOn = false;
   }
-  else {
+};
+
+Thermostat.prototype.powerSaveSwitchOn = function() {
+  if (this.powerSaverOn = false) {
     this.powerSaverOn = true;
-}
+  }
+};
+
 
 Thermostat.prototype.reset = function() {
   this.temperature = 20;
@@ -47,5 +52,4 @@ Thermostat.prototype.powerUsage = function() {
   else {
     return 'High usage'
   }
-};
 };
