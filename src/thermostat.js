@@ -2,20 +2,21 @@
 
 function Thermostat() {
   this.temperature = 20;
+  this.powerSaverOn = true;
 };
 
   const MINIMUMTEMP = 10;
-
-Thermostat.prototype.getTemperature = function(){
-  return this.temperature;
-};
+  const MAXTEMPPOWERSAVE = 25;
 
 Thermostat.prototype.increase = function() {
-  this.temperature += 1;
+    if (this.powerSaverOn && this.temperature < MAXTEMPPOWERSAVE) {
+    this.temperature += 1;
+  };
 };
 
 Thermostat.prototype.decrease = function(){
-  if (this.temperature > 10) {
+  if (this.temperature > MINIMUMTEMP) {
   this.temperature -= 1;
 };
+
 };
