@@ -6,7 +6,6 @@ var temperatureDisplay = function() {
   $('#temperature').attr('class', thermostat.powerUsage());
 };
 
-
 var weather = function(city) {
   var url = "http://api.openweathermap.org/data/2.5/weather?q=";
   var token = "&appid=7d44ddbe20e7f00ee69e31eb64603c83";
@@ -21,10 +20,12 @@ $(document).ready(function() {
   $('#temperature-up').click(function(){
     thermostat.increase();
     temperatureDisplay();
+      $('#gaugeDemo .gauge-arrow').trigger('updateGauge', ((thermostat.temperature - 10)*4.5));
   });
   $("#temperature-down").click(function(){
     thermostat.decrease();
     temperatureDisplay();
+      $('#gaugeDemo .gauge-arrow').trigger('updateGauge', ((thermostat.temperature - 10)*4.5));
   });
   $("#temperature-reset").click(function(){
     thermostat.reset();
@@ -37,9 +38,10 @@ $(document).ready(function() {
   $("#powersaving-off").click(function(){
     thermostat.powerSaveSwitchOff();
     temperatureDisplay();
-  });  
+  });
   $("#city").change(function(){
     var city = $('#city').val();
     weather(city)
   });
+  $('#gaugeDemo .gauge-arrow').cmGauge();
 });

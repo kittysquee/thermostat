@@ -4,28 +4,36 @@
     <meta charset="utf-8">
     <title>Thermostat</title>
     <link rel="stylesheet" href="stylesheet.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Clicker+Script|Cookie|Dawning+of+a+New+Day|Ewert|Homemade+Apple|Macondo" rel="stylesheet">
 
-    <!-- <link rel="stylesheet" href="css/cmGauge.css"> -->
 
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="src/thermostat.js"></script>
 
 
-    <!-- <script src="js/cmGauge.js"></script> -->
+    <script src="cmGauge.js"></script>
 
     <script type="text/javascript" src="interface.js"></script>
   </head>
   <body class="background">
+    <header>
+      <h1>Kate and Elaine's My Little Pony Thermostat</h1>
+    </header>
     <section>
+      <div id="gaugeDemo" class="gauge gauge-big gauge-green">
+        <div class="gauge-arrow" data-percentage="40" style="transform: rotate(0deg);"></div>
+      </div>
+
+    <p style="font-family: 'Homemade Apple', cursive; font-size: 30px;">
+      <span id="temperature"></span><span> degrees</span>
+    </p>
+    <p style="font-family: 'Homemade Apple', cursive; font-size: 30px;">
+      <span id="current-temperature" ></span> <span>degrees (in your location of choice)</span>
+    </p>
 
 
-
-
-
-      <h1 id="temperature"></h1>
-      <h2 id="current-temperature"></h2>
-      <p>
-        <select id="city" action="">
+      <p style="font-family: helvetica;">
+        <select id="city" style="font-family: helvetica; font-size: 20px;">
           <option value="London">London</option>
           <option value="Belfast">Belfast</option>
           <option value="Guildford">Guildford</option>
@@ -42,13 +50,21 @@
           <option value="Marrakech">Marrakech</option>
           <option value="Moscow">Moscow</option>
         </select>
-    <button type="button" id="temperature-up">+</button>
-    <button type="button" id="temperature-down">-</button>
-    <button type="button" id="temperature-reset">Reset</button>
-    power saving mode is <span id="power-saving-status">on</span>
-    <button type="button" id="powersaving-on">PSM On</button>
-    <button type="button" id="powersaving-off">PSM Off</button>
+    <button type="button" id="temperature-up" style="font-family: helvetica; font-size: 20px;">+</button>
+    <button type="button" id="temperature-down" style="font-family: helvetica; font-size: 20px;">-</button>
+    <button type="button" id="temperature-reset" style="font-family: helvetica; font-size: 20px;">Reset</button>
+    power saving mode is <span id="power-saving-status" style="font-family: helvetica; font-size: 20px;">on</span>
+    <button type="button" id="powersaving-on" style="font-family: helvetica; font-size: 20px;">PSM On</button>
+    <button type="button" id="powersaving-off" style="font-family: helvetica; font-size: 20px;">PSM Off</button>
   </p>
   </section>
+
+  <footer>
+    <p> &copy Kate and Elaine 2017 The world's ugliest thermostat (even worse than your Mums)</p>
+  </footer>
+
+
+
+
   </body>
 </html>
