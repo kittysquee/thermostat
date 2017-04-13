@@ -1,7 +1,11 @@
-.background  {
-  background-color: pink;
+.Low {
+   color: green;
 }
 
-#temperature-up {
-  background-color: green;
+.Medium {
+  color: black;
+}
+
+.High {
+  color: red;
 }
