@@ -7,8 +7,17 @@ var temperatureDisplay = function() {
 };
 
 
+var weather = function(city) {
+  var url = "http://api.openweathermap.org/data/2.5/weather?q=";
+  var token = "&appid=7d44ddbe20e7f00ee69e31eb64603c83";
+  var units = "&units=metric"
+  $.get(url + city + token + units, function(data) {
+  $("#current-temperature").text(data.main.temp);})
+};
+
 $(document).ready(function() {
   temperatureDisplay();
+  weather();
   $('#temperature-up').click(function(){
     thermostat.increase();
     temperatureDisplay();
@@ -28,5 +37,9 @@ $(document).ready(function() {
   $("#powersaving-off").click(function(){
     thermostat.powerSaveSwitchOff();
     temperatureDisplay();
+  });  
+  $("#city").change(function(){
+    var city = $('#city').val();
+    weather(city)
   });
 });

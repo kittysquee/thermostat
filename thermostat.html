@@ -4,14 +4,44 @@
     <meta charset="utf-8">
     <title>Thermostat</title>
     <link rel="stylesheet" href="stylesheet.css" type="text/css">
+
+    <!-- <link rel="stylesheet" href="css/cmGauge.css"> -->
+
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="src/thermostat.js"></script>
+
+
+    <!-- <script src="js/cmGauge.js"></script> -->
+
     <script type="text/javascript" src="interface.js"></script>
   </head>
   <body class="background">
     <section>
+
+
+
+
+
       <h1 id="temperature"></h1>
+      <h2 id="current-temperature"></h2>
       <p>
+        <select id="city" action="">
+          <option value="London">London</option>
+          <option value="Belfast">Belfast</option>
+          <option value="Guildford">Guildford</option>
+          <option value="Paris">Paris</option>
+          <option value="Barcelona">Barcelona</option>
+          <option value="Krakow">Krakow</option>
+          <option value="Berlin">Berlin</option>
+          <option value="Athens">Athens</option>
+          <option value="Naples">Naples</option>
+          <option value="Rome">Rome</option>
+          <option value="Porto">Porto</option>
+          <option value="Seville">Seville</option>
+          <option value="Florence">Florence</option>
+          <option value="Marrakech">Marrakech</option>
+          <option value="Moscow">Moscow</option>
+        </select>
     <button type="button" id="temperature-up">+</button>
     <button type="button" id="temperature-down">-</button>
     <button type="button" id="temperature-reset">Reset</button>
